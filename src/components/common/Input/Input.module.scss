@@ -1,0 +1,22 @@
+@import "../../../styles/variables";
+
+.inputContainer {
+  margin-bottom: $spacing-md;
+  width: 100%;
+}
+
+.label {
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out;
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+    box-shadow: 0 0 0 2px rgba($color-primary, 0.2);
+  }
+}

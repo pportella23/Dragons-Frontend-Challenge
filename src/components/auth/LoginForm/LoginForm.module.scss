@@ -1,0 +1,27 @@
+@import "../../../styles/variables";
+
+.form {
+  background: white;
+  padding: $spacing-lg;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.error {
+  color: $color-error;
+  background-color: lighten($color-error, 40%);
+  padding: $spacing-sm;
+  border-radius: 4px;
+  margin-bottom: $spacing-md;
+  text-align: center;
+}
+
+.hint {
+  margin-top: $spacing-md;
+  font-size: 0.875rem;
+  color: #666;
+  text-align: center;
+}
