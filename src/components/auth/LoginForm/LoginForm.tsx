@@ -5,7 +5,7 @@ import { Input } from "../../common/Input/Input";
 import { Button } from "../../common/Button/Button";
 import styles from "./LoginForm.module.scss";
 
-export const LoginForm: React.FC = () => {
+export function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -60,4 +60,4 @@ export const LoginForm: React.FC = () => {
       <p className={styles.hint}>Credenciais de teste: admin / password</p>
     </form>
   );
-};
+}

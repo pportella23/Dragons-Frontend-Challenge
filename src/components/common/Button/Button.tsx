@@ -1,4 +1,4 @@
-import React, { type ButtonHTMLAttributes, type ReactNode } from "react";
+import { type ButtonHTMLAttributes, type ReactNode } from "react";
 import styles from "./Buttton.module.scss";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -6,14 +6,14 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "danger";
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export function Button({
   children,
   variant = "primary",
   ...buttonProps
-}) => {
+}: ButtonProps) {
   return (
     <button className={`${styles.button} ${styles[variant]}`} {...buttonProps}>
       {children}
     </button>
   );
-};
+}

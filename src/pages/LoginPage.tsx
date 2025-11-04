@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { LoginForm } from "../components/auth/LoginForm/LoginForm";
 import styles from "./LoginPage.module.scss"; // Estilos específicos para a página
 
-const LoginPage: React.FC = () => {
+function LoginPage() {
   const { isLoggedIn } = useAuth();
   const navigate = useNavigate();
 
@@ -19,6 +19,6 @@ const LoginPage: React.FC = () => {
       <LoginForm />
     </div>
   );
-};
+}
 
 export default LoginPage;

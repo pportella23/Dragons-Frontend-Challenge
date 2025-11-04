@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { type Dragon } from "../types/dragon";
 import { deleteDragon, getDragons } from "../services/dragonService";
 import { Button } from "../components/common/Button/Button";
 import styles from "./DragonListPage.module.scss";
 
-const DragonListPage: React.FC = () => {
+function DragonListPage() {
   const [dragons, setDragons] = useState<Dragon[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -108,6 +108,6 @@ const DragonListPage: React.FC = () => {
       </ul>
     </div>
   );
-};
+}
 
 export default DragonListPage;

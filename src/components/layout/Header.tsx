@@ -1,10 +1,9 @@
-import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { Button } from "../common/Button/Button";
 import styles from "./Header.module.scss";
 
-const Header: React.FC = () => {
+function Header() {
   const { logout } = useAuth();
   const navigate = useNavigate();
 
@@ -34,6 +33,6 @@ const Header: React.FC = () => {
       </Button>
     </header>
   );
-};
+}
 
 export default Header;
