@@ -1,0 +1,89 @@
+@use "../styles/variables" as *;
+
+.container {
+  max-width: 1200px;
+  margin: $spacing-lg auto;
+  padding: 0 $spacing-md;
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-lg;
+
+  h1 {
+    font-size: 2rem;
+    color: $color-text;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-md;
+  }
+}
+
+.dragonList {
+  list-style: none;
+  padding: 0;
+}
+
+.dragonItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-md;
+  }
+}
+
+.dragonInfo {
+  flex-grow: 1;
+}
+
+.dragonName a {
+  font-size: 1.25rem;
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.dragonType,
+.dragonDate {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.loading,
+.error,
+.empty {
+  text-align: center;
+  padding: $spacing-lg;
+
+  .error {
+    color: $color-error;
+    margin-bottom: $spacing-md;
+  }
+}

@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import LoginPage from "./pages/LoginPage";
-// import DragonsListPage from "./pages/DragonsListPage";
+import DragonsListPage from "./pages/DragonListPage";
 // import DragonDetailsPage from "./pages/DragonDetailsPage";
 // import DragonFormPage from "./pages/DragonFormPage";
 // import NotFoundPage from "./pages/NotFoundPage";
@@ -18,9 +18,9 @@ function App() {
 
           {/* Rotas Protegidas (Todas dentro do PrivateRoute) */}
           <Route element={<PrivateRoute />}>
-            {/* <Route path="/" element={<DragonsListPage />} />
+            <Route path="/" element={<DragonsListPage />} />
             <Route path="/dragons" element={<DragonsListPage />} />
-            <Route path="/dragons/create" element={<DragonFormPage />} />
+            {/* <Route path="/dragons/create" element={<DragonFormPage />} />
             <Route path="/dragons/:id" element={<DragonDetailsPage />} /> */}
             <Route
               path="/dragons/edit/:id"

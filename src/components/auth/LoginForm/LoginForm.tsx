@@ -38,7 +38,7 @@ export const LoginForm: React.FC = () => {
       <Input
         label="Nome de Usuário"
         type="text"
-        placeholder="user"
+        placeholder="usuário"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         required
@@ -47,7 +47,7 @@ export const LoginForm: React.FC = () => {
       <Input
         label="Senha"
         type="password"
-        placeholder="password"
+        placeholder="senha"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required
@@ -57,7 +57,7 @@ export const LoginForm: React.FC = () => {
         Entrar
       </Button>
 
-      <p className="styles.hint">Credenciais de teste: user / 123</p>
+      <p className={styles.hint}>Credenciais de teste: admin / password</p>
     </form>
   );
 };

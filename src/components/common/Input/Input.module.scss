@@ -1,4 +1,4 @@
-@import "../../../styles/variables";
+@use "../../../styles/variables" as *;
 
 .inputContainer {
   margin-bottom: $spacing-md;
@@ -6,6 +6,13 @@
 }
 
 .label {
+  display: block;
+  margin-bottom: $spacing-sm;
+  font-weight: 600;
+  color: $color-text;
+}
+
+.input {
   width: 100%;
   padding: $spacing-sm $spacing-md;
   border: 1px solid #ccc;
